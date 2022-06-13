@@ -1,0 +1,74 @@
+<template>
+  <div>
+      <div>
+        <LeftMenu :items='items'></LeftMenu>
+      </div>
+      <div>
+          <router-view></router-view>
+      </div>
+  </div>
+</template>
+
+<script>
+import LeftMenu from 'components/layout/LeftMenu.vue'
+export default {
+    components:{
+        LeftMenu,
+    },
+    data(){
+        return{
+            items:[
+                {
+                    index:'queryMap',
+                    title:'人口画像查询',
+                    src:require('assets/population/queryMap.png'),
+                },
+                {
+                    index:'graduateMap',
+                    title:'毕业生人口画像',
+                    src:require('assets/population/graduateMap.png'),
+                },
+                {
+                    index:'census',
+                    title:'人口普查',
+                    src:require('assets/population/census.png'),
+                },
+                {
+                    index:'timeSharding',
+                    title:'分时人口统计',
+                    src:require('assets/population/timeSharding.png'),
+                },
+                {
+                    index:'countyInfo',
+                    title:'村界人口概览',
+                    src:require('assets/population/countyInfo.png'),
+                },
+                {
+                    index:'bigBay',
+                    title:'大湾区人口OD',
+                    src:require('assets/population/bigBay.png'),
+                },
+                {
+                    index:'guangdongOD',
+                    title:'市县级人口OD',
+                    src:require('assets/population/guangdongOD.png'),
+                },
+                {
+                    index:'transportationOD',
+                    title:'交通小区人口OD',
+                    src:require('assets/population/transportationOD.png'),
+                },
+                {
+                    index:'carInduChain',
+                    title:'汽车产业链',
+                    src:require('assets/population/CarInduChain.png'),
+                },
+            ]
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>

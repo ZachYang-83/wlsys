@@ -1,0 +1,69 @@
+<template>
+  <div>
+      <div>
+        <LeftMenu :items='items'></LeftMenu>
+      </div>
+      <div>
+          <router-view></router-view>
+      </div>
+  </div>
+</template>
+
+<script>
+import LeftMenu from 'components/layout/LeftMenu.vue'
+export default {
+    components:{
+        LeftMenu,
+    },
+    data(){
+        return{
+            items:[
+                {
+                    index:'roadInfo',
+                    title:'道路设施',
+                    src:require('assets/publicInfo/roadInfo.png'),
+                },
+                {
+                    index:'eduInfo',
+                    title:'教育设施',
+                    src:require('assets/publicInfo/eduInfo.png'),
+                },
+                {
+                    index:'medInfo',
+                    title:'医疗设施',
+                    src:require('assets/publicInfo/medInfo.png'),
+                },
+                {
+                    index:'civInfo',
+                    title:'民政设施',
+                    src:require('assets/publicInfo/civInfo.png'),
+                },
+                {
+                    index:'palInfo',
+                    title:'政法设施',
+                    src:require('assets/publicInfo/palInfo.png'),
+                },
+                {
+                    index:'culInfo',
+                    title:'文化设施',
+                    src:require('assets/publicInfo/culInfo.png'),
+                },
+                {
+                    index:'sportInfo',
+                    title:'体育设施',
+                    src:require('assets/publicInfo/sportInfo.png'),
+                },
+                {
+                    index:'marketInfo',
+                    title:'批发市场',
+                    src:require('assets/publicInfo/marketInfo.png'),
+                },
+            ]
+        }
+    }
+}
+</script>
+
+<style>
+
+</style>
